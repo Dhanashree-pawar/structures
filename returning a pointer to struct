@@ -1,0 +1,25 @@
+create a object of struct in heap using a functio and return its add 
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+//struct as parameter passed by address
+struct rect{
+    int len;
+    int bdt;
+};
+rect * fun (){
+    struct rect *f;
+    f =  new  rect;
+// in c: f= (struct rect *)malloc(sizeof(struct rect)
+    f->len=65;
+    f->bdt=78;
+    return f;
+}
+
+int main()
+{
+  struct rect *g;
+  g = fun();
+  cout<<g->len<<" "<<g->bdt;
+  return 0;
+}
