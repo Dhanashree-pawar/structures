@@ -1,0 +1,14 @@
+struct rect{
+     int len;
+     int bdt;
+ };
+
+int main()
+{
+   struct rect *p;
+    p = (struct rect *)malloc(sizeof(struct rect));
+    p -> len=54;
+    cout<< p -> len;
+    
+    return 0;
+}
