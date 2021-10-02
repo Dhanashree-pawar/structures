@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+//struct as parameter passed by address
+struct rect{
+    int len;
+    int bdt;
+};
+void fun (struct rect *r2){
+    r2->len=45;
+    cout<<"inside fun";
+    cout<<r2->len<<endl<<r2->bdt;
+}
+
+int main()
+{
+  struct rect r={10,5};
+  cout<<r.len<<" "<<r.bdt<<endl;
+  fun(&r);
+    cout<<endl<<"after"<<r.len<<" "<<r.bdt<<endl;
+  return 0;
+}
