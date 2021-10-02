@@ -1,0 +1,23 @@
+struct rect{
+    int len;
+    int bdt;
+}r1={10,5};
+int main()
+{
+    
+  cout<<r1.len;
+    return 0;
+}
+struct rect{
+    int len;
+    int bdt;
+}r1={10,5};
+int main()
+{
+    rect *p;
+    p=&r1;
+  cout<<p->len;
+    cout<<(*p).len;
+    return 0;
+}
+
