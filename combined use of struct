@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+struct rect{
+    int len;
+    int bdt;
+};
+void initialize(struct rect *r, int l, int b){ // here I took int*r but thats not right
+    //struct rect r1={l, b}; wrong
+    r->len=l;
+    r->bdt=b;
+}
+int area(struct rect r2){
+    cout<<"area is"<< r2.len*r2.bdt<<endl;// call by value hence dot operator
+}
+void changelen(struct rect *r3, int num3){
+    r3->len= num3;
+    cout<<"after changing"<<r3->len;
+}
+int main()
+{
+  struct rect r;
+ initialize (&r,10,5);
+ area(r);
+ changelen(&r,20);
+ 
+  return 0;
+}
