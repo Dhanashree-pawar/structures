@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+//struct as parameter
+// pass by value
+struct rect{
+    int len;
+    int bdt;
+};
+int area(struct rect r1){
+    return r1.len*r1.bdt;
+}    
+
+
+int main()
+{
+  struct rect r={5,10};
+  cout<<area(r);
+  return 0;
+}
